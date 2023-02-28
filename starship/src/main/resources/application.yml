@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    format:
+      date: iso
+      date-time: iso
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+    default-property-inclusion: non_null
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+
+server:
+  port:
+    12555
